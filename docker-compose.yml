@@ -1,0 +1,11 @@
+---
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    # port:
+    #   2222:2222
+    command: tunnel run
+    network_mode: "host"
+    environment:
+      - TUNNEL_TOKEN=eyJhIjoiOWNkYWUzZWE3MzQwZWRlMzA0ZGQwYTk1OTM1OWNkYTkiLCJ0IjoiMzJmZDQxN2UtMDhkNC00Yzg1LTgzNjctYTlhNjEyMTE4YWJlIiwicyI6Ik1HUm1ZMlJrTURVdE1qYzVNaTAwWVRNMUxUazFOamN0WldNNE1XVTROemxpTnpRdyJ9
